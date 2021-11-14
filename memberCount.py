@@ -21,7 +21,7 @@ class memberCount(commands.Cog):
     
      async def members(self, ctx):
           activeGuilds = self.bot.guilds
-          channel = self.bot.get_channel(909268842486824960)
+          channel = self.bot.get_channel(<channel id>)
           sum = 0
           for s in activeGuilds:
               sum += len(s.members)
@@ -32,12 +32,12 @@ class memberCount(commands.Cog):
      @commands.Cog.listener()
      async def on_member_join(self, member):
           print("joined")
-          await members()
+          await self.members()
 
      @commands.Cog.listener()
      async def on_member_remove(self, member):
           print("left")
-          await members()
+          await self.members()
     
 
                     
